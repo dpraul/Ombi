@@ -30,7 +30,7 @@ namespace Ombi.Core.Tests.Authentication
             AuthenticationSettings.Setup(x => x.GetSettingsAsync())
                 .ReturnsAsync(new AuthenticationSettings());
             _um = new OmbiUserManager(UserStore.Object, null, null, null, null, null, null, null, null,
-                PlexApi.Object, null, null, AuthenticationSettings.Object,LdapApi.Object,UserManagementApi.Object);
+                PlexApi.Object, null, null, AuthenticationSettings.Object,LdapApi.Object,null);
         }
 
         public OmbiUserManager _um { get; set; }
@@ -38,7 +38,6 @@ namespace Ombi.Core.Tests.Authentication
         private Mock<IPlexApi> PlexApi { get; set; }
         private Mock<ISettingsService<AuthenticationSettings>> AuthenticationSettings { get; set; }
         private Mock<ILdapUserManager> LdapApi { get; set; }
-        private Mock<UserManagementSettings> UserManagementApi { get; set; }
 
         [Test]
         public async Task CheckPassword_PlexUser_EmailLogin_ValidPassword()
