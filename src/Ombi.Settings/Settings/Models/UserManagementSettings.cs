@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Ombi.Settings.Settings.Models.External;
 
 namespace Ombi.Settings.Settings.Models
 {
-    public class UserManagementSettings : Settings
+    public class UserManagementSettings : Ombi.Settings.Settings.Models.Settings
     {
         public bool ImportPlexAdmin { get; set; }
         public bool ImportPlexUsers { get; set; }
