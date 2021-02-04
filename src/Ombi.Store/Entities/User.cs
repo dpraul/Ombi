@@ -34,6 +34,6 @@ namespace Ombi.Store.Entities
         PlexUser = 2,
         EmbyUser = 3,
         EmbyConnectUser = 4,
-        LdapUser = 5,
+        LdapUser = 6,
     }
 }
