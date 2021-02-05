@@ -19,15 +19,15 @@
     <div class="form-group">
       <mat-form-field appearance="outline">
         <mat-label>Hostname</mat-label>
-        <input matInput required formControlName="hostname">
+        <input matInput placeholder="ldap-server.example.tld" required formControlName="hostname">
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Port</mat-label>
-        <input matInput type="number" required formControlName="port">
+        <input matInput type="number" placeholder="389" required formControlName="port">
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Base DN</mat-label>
-        <input matInput required formControlName="baseDn">
+        <input matInput placeholder="o=domains,dc=example,dc=tld" required formControlName="baseDn">
       </mat-form-field>
 
       <mat-checkbox formControlName="useSsl">
@@ -44,23 +44,23 @@
     <div class="form-group">
       <mat-form-field appearance="outline">
         <mat-label>Bind User DN</mat-label>
-        <input matInput required formControlName="bindUserDn">
+        <input matInput placeholder="cn=BindUser,dc=example,dc=tld" required formControlName="bindUserDn">
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Bind User Password</mat-label>
-        <input matInput required type="password" formControlName="bindUserPassword">
+        <input matInput placeholder="password" required type="password" formControlName="bindUserPassword">
       </mat-form-field>
     </div>
 
     <div class="form-group">
       <mat-form-field appearance="outline">
         <mat-label>Username Attribute</mat-label>
-        <input matInput required formControlName="usernameAttribute">
+        <input matInput placeholder="uid" required formControlName="usernameAttribute">
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Search Filter</mat-label>
-        <input matInput required formControlName="searchFilter">
+        <input matInput placeholder="(memberOf=cn=Users,dc=example,dc=tld)" required formControlName="searchFilter">
       </mat-form-field>
     </div>
 
