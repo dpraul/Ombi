@@ -125,7 +125,7 @@ namespace Ombi.Core.Authentication
             {
                 var currentUser = ldapUsers.Next();
                 var foundUsername = GetLdapAttribute(currentUser, settings.UsernameAttribute)?.StringValue;
-                if (foundUsername == username)
+                if (foundUsername.Equals(username,StringComparison.CurrentCultureIgnoreCase))
                 {
                     return currentUser;
                 }
