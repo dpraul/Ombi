@@ -30,7 +30,7 @@ namespace Ombi.Core.Authentication
         public async Task<OmbiUser> LdapEntryToOmbiUser(LdapEntry entry)
         {
             var settings = await GetSettings();
-            var userName = GetLdapAttribute(entry, settings.UsernameAttribute).StringValue;
+            var userName = GetLdapAttribute(entry, settings.UsernameAttribute)?.StringValue;
 
             return new OmbiUser
             {
